@@ -2,7 +2,7 @@ class Sort
   def self.asc(array)
     res = []
 
-    while !array.empty? do
+    until array.empty? do
       min = array.shift
 
       if array.map { |i| min > i }.include?(true)
@@ -18,7 +18,7 @@ class Sort
   def self.desc(array)
     res = []
 
-    while !array.empty? do
+    until array.empty? do
       min = array.shift
 
       if array.map { |i| min < i }.include?(true)
