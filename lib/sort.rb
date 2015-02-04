@@ -4,9 +4,8 @@ class Sort
 
     while !array.empty? do
       min = array.shift
-      list = array.map { |i| min > i }
 
-      if list.include?(true)
+      if array.map { |i| min > i }.include?(true)
         array << min
       else
         res << min
@@ -21,9 +20,8 @@ class Sort
 
     while !array.empty? do
       min = array.shift
-      list = array.map { |i| min < i }
 
-      if list.include?(true)
+      if array.map { |i| min < i }.include?(true)
         array << min
       else
         res << min
