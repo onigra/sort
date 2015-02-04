@@ -1,33 +1,33 @@
 class Sort
   def self.asc(array)
-    res = []
+    array.size.times do |i|
+      min = i
 
-    until array.empty? do
-      min = array.shift
-
-      if array.map { |i| min > i }.include?(true)
-        array << min
-      else
-        res << min
+      i.upto (array.size - 1) do |idx|
+        if array[idx] < array[min]
+          min = idx
+        end
       end
+
+      array[i], array[min] = array[min], array[i]
     end
 
-    res
+    array
   end
 
   def self.desc(array)
-    res = []
+    array.size.times do |i|
+      min = i
 
-    until array.empty? do
-      min = array.shift
-
-      if array.map { |i| min < i }.include?(true)
-        array << min
-      else
-        res << min
+      i.upto (array.size - 1) do |idx|
+        if array[idx] > array[min]
+          min = idx
+        end
       end
+
+      array[i], array[min] = array[min], array[i]
     end
 
-    res
+    array
   end
 end
