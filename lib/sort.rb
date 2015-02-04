@@ -4,17 +4,11 @@ class Sort
 
     while !array.empty? do
       min = array.shift
-      flg = nil
+      list = array.map { |i| min > i }
 
-      array.each do |i|
-        if min > i
-          array << min
-          flg = 1
-          break
-        end
-      end
-
-      if flg.nil?
+      if list.include?(true)
+        array << min
+      else
         res << min
       end
     end
@@ -27,17 +21,11 @@ class Sort
 
     while !array.empty? do
       min = array.shift
-      flg = nil
+      list = array.map { |i| min < i }
 
-      array.each do |i|
-        if min < i
-          array << min
-          flg = 1
-          break
-        end
-      end
-
-      if flg.nil?
+      if list.include?(true)
+        array << min
+      else
         res << min
       end
     end
