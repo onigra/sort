@@ -1,4 +1,4 @@
-class Sort
+class MySort
   def self.asc(array)
     res = []
 
