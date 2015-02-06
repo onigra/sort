@@ -1,5 +1,2 @@
 require 'rspec'
-require_relative '../lib/sort/my_sort'
-require_relative '../lib/sort/selection_sort'
-require_relative '../lib/sort/ruby_sort'
-require_relative '../lib/search/linear_search'
+Dir["./lib/*/*.rb"].delete_if { |f| f =~ /benchmark/ }.each { |f| require f }
