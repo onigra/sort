@@ -1,5 +1,4 @@
-require 'rspec'
-require_relative '../lib/selection_sort'
+require_relative '../spec_helper'
 
 describe SelectionSort do
   describe ".asc" do
