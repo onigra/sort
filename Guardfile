@@ -12,6 +12,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   watch(%r{^lib/sort/ruby_sort.rb$}) { |m| "spec/sort/ruby_sort_spec.rb" }
 
   watch(%r{^lib/search/linear_search.rb$}) { |m| "spec/search/linear_search_spec.rb" }
+  watch(%r{^lib/search/binary_search.rb$}) { |m| "spec/search/binary_search_spec.rb" }
 
   ruby = dsl.ruby
   dsl.watch_spec_files_for(ruby.lib_files)
