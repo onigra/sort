@@ -10,9 +10,19 @@ class LinearSearch
     end
 
     if hit_index.nil?
-      "#{search_number}は見つかりませんでした"
+      hit_message search_number
     else
-      "#{search_number}が#{hit_index}番目に見つかりました"
+      unhit_message(search_number, hit_index)
     end
+  end
+
+  private
+
+  def self.hit_message(search_number)
+    "#{search_number}は見つかりませんでした"
+  end
+
+  def self.unhit_message(search_number, hit_index)
+    "#{search_number}が#{hit_index}番目に見つかりました"
   end
 end
